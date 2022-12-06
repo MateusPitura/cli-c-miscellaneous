@@ -1,3 +1,5 @@
+//Calcula a media de N termos
+
 #include <stdio.h>
 #include <locale.h>
 
