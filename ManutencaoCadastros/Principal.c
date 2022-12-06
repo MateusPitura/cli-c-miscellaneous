@@ -1,4 +1,4 @@
-// 1 de 3 arquivos. Funcoes para desenhar o menu
+// 1 de 3 arquivos. Chama funcoes dos outros 2 arquivos
 
 #include <stdio.h>
 #include <windows.h>
