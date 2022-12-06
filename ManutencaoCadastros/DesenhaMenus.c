@@ -1,4 +1,4 @@
-//1 de 3 arquivos
+//1 de 3 arquivos. Funcoes que desenham o menu
 
 #include <stdio.h>
 #include <windows.h>
