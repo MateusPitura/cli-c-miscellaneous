@@ -15,5 +15,5 @@ int main(void){
 
 void calc_esfera(float R, float *area, float *volume){
     *area=4*PI*pow(R,2);
-    *volume=(4*PI*pow(R,3))/3; //Se for (4,3)*PI*pow(R,3)
+    *volume=((float)4/3)*PI*pow(R,3);
 }
