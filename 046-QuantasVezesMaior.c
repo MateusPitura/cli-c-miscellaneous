@@ -4,10 +4,11 @@ void ordena(int *array, int len);
 void repetFirst(int *array, int len, int *bigger, int *rptt);
 
 int main(void){
-    int vetor[]={5,2,3,7,8,6,9,8,7,6,4,3,8,1,9};
-    int maior, repeticoes;
-    ordena(vetor, 15);
-    repetFirst(vetor, 15, &maior, &repeticoes);
+    int vetor[]={15,5,2,3,7,8,6,9,8,15,7,6,4,3,8,1,9,10,15};
+    int maior, repeticoes, tamanho;
+    tamanho=sizeof(vetor)/sizeof(vetor[0]);
+    ordena(vetor, tamanho);
+    repetFirst(vetor, tamanho, &maior, &repeticoes);
     printf("%d aparece %d vezes", maior, repeticoes);
 }
 
