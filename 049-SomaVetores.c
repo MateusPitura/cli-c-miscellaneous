@@ -6,6 +6,7 @@ deve retornar o valor UM (1). Utilize aritmetica de ponteiros para manipulacao d
 */
 
 #include <stdio.h>
+#include <time.h>
 
 #define TAM_A 5
 #define TAM_B 5
@@ -13,11 +14,16 @@ deve retornar o valor UM (1). Utilize aritmetica de ponteiros para manipulacao d
 
 float sorteia(int tamMin, int tamMax);
 void preenche(float *array, int size, int tamMin, int tamMax);
+void exibe(float *array, int size);
 int somaVetores(float *arrayA, int sizeA, float *arrayB, int sizeB, float *arrayC);
 
 int main(){
     float vetA[TAM_A], vetB[TAM_B], vetC[TAM_C];
-
+    srand(time(NULL));
+    preenche(vetA, TAM_A, 0, 5);
+    preenche(vetB, TAM_B, 6, 11);
+    somaVetores(vetA, TAM_A, vetB, TAM_C, vetC);
+    exibe(vetC, TAM_C);
 }
 
 float sorteia(int tamMin, int tamMax){
@@ -30,6 +36,20 @@ void preenche(float *array, int size, int tamMin, int tamMax){
     }
 }
 
-int somaVetores(float *arrayA, int sizeA, float *arrayB, int sizeB, float *arrayC){
+void exibe(float *array, int size){
+    for(int i=0; i<size; i++){
+        printf("%-5.2f\n", *(array+i));
+    }
+}
 
+int somaVetores(float *arrayA, int sizeA, float *arrayB, int sizeB, float *arrayC){
+    if(sizeA!=sizeB){
+        return 0;
+    }
+    else{
+        for(int i=0; i<sizeA; i++){
+            *(arrayC+i)=*(arrayA+i)+*(arrayB+i);
+        }
+        return 1;
+    }
 }
