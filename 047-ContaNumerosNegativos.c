@@ -23,7 +23,7 @@ int main(){
 }
 
 float sorteia(int limMin, int limMax){
-    return limMin+rand()%(limMax-limMin+1);
+    return limMin+(rand()%(limMax-limMin+1)); //Gera valores aleatorios do limMin ao liMax (incluindo-os)
 }
 
 void preenche(float *array, int size, int limMin, int limMax){
