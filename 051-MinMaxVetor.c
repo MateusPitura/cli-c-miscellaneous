@@ -3,7 +3,7 @@
 
 #define N 25
 
-void ordena(float *array, int size); //0: crescente, 1: decrescente
+void ordena(float *array, int size, char ctrl); //0: crescente, 1: decrescente
 void exibe(float *array, int size);
 float sorteia(int min, int max);
 void fill(float *array, int size, int min, int max);
@@ -15,15 +15,15 @@ int main(){
     fill(vetor, N, 5, 10);
     exibe(vetor, N);
     printf("\n");
-    ordena(vetor, N);
+    ordena(vetor, N, '1');
     exibe(vetor, N);
     printf("\n");
 }
 
-void ordena(float *array, int size){
+void ordena(float *array, int size, char ctrl){
     for(int i=0; i<size; i++){
         for(int j=i; j<size; j++){
-            if(*(array+i)>*(array+j)){
+            if(ctrl=='0'?*(array+i)>*(array+j):*(array+i)<*(array+j)){
                 comuta(array+i, array+j);
             }
         }
