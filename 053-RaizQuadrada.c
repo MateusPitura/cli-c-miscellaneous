@@ -21,14 +21,14 @@ int main(void){
     int A, B, C;
     float raiz1, raiz2;
     printf("Digite A, B e C: ");
-    scanf("%d %d %d", A, B, C);
+    scanf("%d %d %d", &A, &B, &C);
     switch(raizes(A, B, C, &raiz1, &raiz2)){
-        case -1: printf("Não existe raizes reais"); break;
-        case 0: printf("Existe uma raiz real"); break;
-        case 1: printf("Existe duas raizes reais"); break;
-        default: printf("Retorno invalido"); exit(-1);
+        case -1: printf("Não existe raizes reais\n"); break;
+        case 0: printf("Existe uma raiz real\n"); break;
+        case 1: printf("Existe duas raizes reais\n"); break;
+        default: printf("Retorno invalido\n"); exit(-1);
     }
-    printf("Raiz 1: %6.2f Raiz 2: %6.2f", raiz1, raiz2);
+    printf("Raiz 1: %-6.2f Raiz 2: %-6.2f", raiz1, raiz2);
 }
 
 int raizes(float A, float B, float C, float *X1, float *X2){ //0: delta==0, 1: delta>0, -1: delta<0
@@ -40,7 +40,7 @@ int raizes(float A, float B, float C, float *X1, float *X2){ //0: delta==0, 1: d
         if(delta==0){
             return 0;
         }
-        else{
+        else{ //delta>0
             return 1;
         }        
     }
