@@ -9,7 +9,7 @@
 
 //Declaração de constantes
 const int AZUL_BRANCO=151, AMARELO_VERDE=226, LINHA_MINIMA=4, LINHA_MAXIMA=18, MENOR_COLUNA=20, MAIOR_COLUNA=35, COLUNA_INICIO_TEXTO=22;
-const int tamTabuleiro=4;
+#define tamTabuleiro 4
 
 //Declaração de variaveis
 int tecla, posicao=4, stop=1;
