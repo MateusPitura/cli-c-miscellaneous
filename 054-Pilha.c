@@ -5,14 +5,14 @@
 
 char pilha[TAMANHO];
 
-void zeraVetor(int tamanho);
+void zeraPilha();
 char topo(void);
 int push(char input);
 int pop(void);
 void imprimi(void);
 
 int main(void){
-    zeraVetor(TAMANHO);
+    zeraPilha();
     int escolha=0;
     char c;
     do{
@@ -44,8 +44,8 @@ int main(void){
     }while(escolha!=5);
 }
 
-void zeraVetor(int tamanho){
-    for(int i=0; i<tamanho; i++){
+void zeraPilha(){
+    for(int i=0; i<TAMANHO; i++){
         pilha[i]=0;
     }
 }
