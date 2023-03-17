@@ -42,6 +42,7 @@ int main(void){
                 system("pause");
         }
     }while(escolha!=5);
+    return 0;
 }
 
 void zeraPilha(){
