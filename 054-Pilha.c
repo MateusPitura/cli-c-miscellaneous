@@ -58,7 +58,7 @@ char topo(){
             return pilha[i];
         }
     }
-    return i;
+    return 1;
 }
 
 int push(char input){
@@ -85,7 +85,7 @@ int pop(){
 
 void imprimi(){
     for(int i=(TAMANHO-1); i>=0; i--){
-        printf("| %1c |\n", pilha[i]);
+        printf("| %c |\n", pilha[i]);
     }
     system("pause");
 }
