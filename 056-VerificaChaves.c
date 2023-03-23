@@ -5,22 +5,22 @@
 
 char pilha[TAMANHO];
 char expressao[TAMANHO];
+int topo=-1;
 
-void zeraVetor(char *vet);
-int push(int input);
-int pop();
-int topo();
-void imprimi(char *vet);
+void push(int input);
+void pop();
+void topoPilha();
+void imprimi();
 void validaFechamento(char c);
 
 int main(void){
     do{
-        zeraVetor(pilha);
-        zeraVetor(expressao);
         printf("Digite uma expressao: ");
-        scanf("%s", expressao);
+        fgets(expressao, TAMANHO, stdin);
+        printf("%s", expressao);
         fflush(stdin);
-        for(int i=0; i<TAMANHO; i++){
+        int i;
+        for(i=0; expressao[i]!='\0'; i++){
             switch(expressao[i]){
                 case '{':
                     push(expressao[i]);
@@ -42,11 +42,8 @@ int main(void){
                     break;
                 default: break;
             }
-            // imprimi(pilha);
-            // system("pause");
-            // system("cls");
         }
-        if(topo()==1){
+        if(topo==-1){
             printf("Fechamento correto\n");
         }
         else{
@@ -56,59 +53,38 @@ int main(void){
     return 0;
 }
 
-void zeraVetor(char *vet){
-    for(int i=0; i<TAMANHO; i++){
-        vet[i]=0;
+void push(int input){
+    if(topo==TAMANHO-1){
+        printf("Pilha cheia\n");
+        return;
     }
+    topo++;
+    pilha[topo]=input;
 }
 
-int push(int input){
-    int i;
-    for(i=0; i<TAMANHO; i++){
-        if(pilha[i]==0){
-            pilha[i]=input;
-            return 0;
-        }
+void pop(){
+    if(topo==-1){
+        printf("Pilha vazia\n");
+        return;
     }
-    return i;
+    topo--;
 }
 
-int pop(){
-    int i;
-    for(i=(TAMANHO-1); i>=0; i--){
-        if(pilha[i]!=0){
-            pilha[i]=0;
-            return 0;
-        }
+void topoPilha(){
+    if(topo==-1){
+        printf("Pilha vazia\n");
+        return;
     }
-    return i;
-}
-
-int topo(){
-    int i=0;
-    for(i=(TAMANHO-1); i>=0; i--){
-        if(pilha[i]!=0){
-            return pilha[i];
-        }
-    }
-    return 1; //Pilha vazia
-}
-
-void imprimi(char *vet){
-    for(int i=(TAMANHO-1); i>=0; i--){
-        printf("| %c |\n", vet[i]);
-    }
+    printf("Topo: %c\n", pilha[topo]);
 }
 
 void validaFechamento(char c){
-    int temp=topo();
-    if(temp==c && temp!=1){
-        pop();
-    }
-    else{
+    if(topo==-1){
         system("cls");
-        // printf("topo: %c, Char: %c\n", temp, c);
         printf("Fechamento incorreto");
         exit(1);
+    }
+    else if(pilha[topo]==c){
+        pop();
     }
 }
