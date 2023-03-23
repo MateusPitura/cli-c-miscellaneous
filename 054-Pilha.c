@@ -89,3 +89,65 @@ void imprimi(){
     }
     system("pause");
 }
+
+/*
+#include <iostream>
+
+using namespace std;
+
+const int TAM=8;
+
+int pilha[TAM];
+int topo=-1;
+
+void push(int valor);
+void pop();
+void topoPilha();
+void imprimi();
+
+int main(void){
+	push(1);
+	push(2);
+	push(3);
+	push(4);
+	pop();
+	topoPilha();
+	imprimi();
+	return 0;
+}
+
+void push(int valor){
+	if(topo==TAM-1){
+		cout<<"Pilha cheia\n";
+		return;
+	}
+	topo++;
+	pilha[topo]=valor;
+	cout<<"Sucesso\n";
+}
+
+void pop(){
+	if(topo==-1)	{
+		cout<<"Pilha vazia\n";
+		return;
+	}
+	topo--;
+	cout<<"Sucesso\n";
+	
+}
+
+void topoPilha(){
+	if(topo==-1){
+		cout<<"Pilha vazia\n";
+		return;
+	}
+	cout<<"Topo: "<<pilha[topo]<<"\n";
+}
+
+void imprimi(){
+	int i;
+	for(i=topo; i>=0; i--){
+		cout<<"| "<<pilha[i]<<" |\n";
+	}
+}
+*/
