@@ -4,7 +4,6 @@
 
 int fila[TAM];
 int fim=-1;
-int elementos=0;
 
 void enqueue(int valor);
 void dequeue();
