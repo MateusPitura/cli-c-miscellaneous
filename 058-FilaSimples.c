@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-#define TAM 5
+#define TAM 10
 
 int fila[TAM];
-int inicio=0;
 int fim=-1;
 int elementos=0;
 
@@ -11,13 +10,12 @@ void enqueue(int valor);
 void dequeue();
 void inicioFila();
 void imprimi();
+void movimentar();
 
 int main(void){
-    enqueue(8);
-    enqueue(10);
-    enqueue(7);
-    enqueue(11);
-    enqueue(5);
+    enqueue(1);
+    enqueue(2);
+    enqueue(3);
     dequeue();
     inicioFila();
     imprimi();
@@ -34,25 +32,33 @@ void enqueue(int valor){
 }
 
 void dequeue(){
-    if(inicio<=fim){
+    if(fim==-1){
         printf("Fila vazia\n");
         return;
     }
-    inicio++;
+    movimentar();
+    fim--;
 }
 
 void inicioFila(){
-    if(inicio<=fim){
+    if(fim==-1){
         printf("Fila vazia\n");
         return;
     }
-    printf("Inicio: %d\n", fila[inicio]);
+    printf("Inicio: %d\n", fila[0]);
 }
 
 void imprimi(){
     int i;
-    for(i=inicio; i<=fim; i++){
+    for(i=0; i<TAM; i++){
         printf("| %d ", fila[i]);
     }
     printf("|\n");
+}
+
+void movimentar(){
+    int i;
+    for(i=0; i<=fim; i++){
+        fila[i]=(fila[i+1]);
+    }
 }
