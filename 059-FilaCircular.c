@@ -16,21 +16,15 @@ int main(void){
     enqueue('A');
     enqueue('B');
     enqueue('C');
-    enqueue('E');
-    enqueue('F');
-    enqueue('G');
-    enqueue('H');
-    enqueue('I');
+    inicioFila();
     dequeue();
-    enqueue('J');
-    enqueue('K');
     imprimir();
     dequeue();
     imprimir();
 }
 
 void enqueue(int valor){
-    if((tamanho+1)>TAM){
+    if(tamanho>=TAM){
         printf("Fila cheia\n");
         return;
     }
@@ -43,7 +37,7 @@ void enqueue(int valor){
 }
 
 void dequeue(){
-    if((tamanho-1)<0){
+    if(tamanho<=0){
         printf("Fila vazia\n");
         return;
     }
@@ -55,13 +49,33 @@ void dequeue(){
 }
 
 void inicioFila(){
-    if(tamanho>0){
-        printf("Inicio da fila: %c\n", fila[inicio]);
-    } else{
-        printf("Fila vazia\n");
-    }
+   if(tamanho>0){
+      	printf("Inicio da fila: %c\n", fila[inicio]);
+      	return;
+	}
+   printf("Fila vazia\n");
 }
 
+void imprimir(){
+   int i;
+   int j;
+	if(tamanho==0){
+		printf("Fila vazia");
+		return;
+	}
+	j=inicio; 
+	for(i=0; i<tamanho; i++){
+		printf("%c ", fila[j]);
+		if(j==TAM-1){
+			j=0;
+		} else{
+			j++;
+		}
+	}
+	printf("\n");
+}
+
+/*
 void imprimir(){
     if(tamanho>0){
         int i;
@@ -82,3 +96,4 @@ void imprimir(){
         printf("Fila vazia\n");
     }
 }
+*/
