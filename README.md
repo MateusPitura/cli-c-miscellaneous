@@ -12,11 +12,6 @@
 Este repositório contém uma coleção de programas escritos em C que desenvolvi enquanto aprendia a linguagem. Cada programa representa um exercício prático de diferentes conceitos e técnicas de programação em C,
 focados para serem executados no Windows
 
-## Índice 
-
-- [Tecnologias usadas](#tecnologias-usadas) 
-- [Autores](#autores) 
-
 ## Tecnologias usadas 
 
 :heavy_check_mark: C
