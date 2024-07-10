@@ -9,7 +9,7 @@ gráfica foi criada manualmente e também foi utilizado `pthread`, para executar
 
 - **Interface Gráfica:** inteface gráfica criada manualmente 
 
-- **Threads:** uso de threads para escutar o teclado e movimentar a cobrinha paralelamente
+- **Threads:** uso de threads para escutar o teclado e movimentar o personagem
 
 https://github.com/MateusPitura/cli-c-miscellaneous/assets/119008106/d5df1660-04fd-4967-807d-9421a0aa02cd
 
