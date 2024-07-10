@@ -2,15 +2,15 @@
   <p>Cadastro</p> 
 </h1> 
 
+Este programa implementa um CRUD em C de cadastros com interface gráfica feita manualmente e persistência de dados em arquivos
+
 ## Funcionalidades 
 
 - **Interface Gráfica:** inteface gráfica criada manualmente 
 
-- **Título da funcionalidade2:** persistência de dados em arquivos
+- **Arquivos:** persistência de dados em arquivos
 
-<p align="center"> 
-  <img src="link do gif ou vídeo" width="25%"> 
-</p> 
+https://github.com/MateusPitura/cli-c-miscellaneous/assets/119008106/aea5afe2-68e2-4380-a659-71a2022c091f
 
 ## Como executar 
 
