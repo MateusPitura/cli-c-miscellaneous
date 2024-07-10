@@ -11,6 +11,8 @@ gráfica foi criada manualmente e também foi utilizado `pthread`, para executar
 
 - **Threads:** uso de threads para escutar o teclado e movimentar a cobrinha paralelamente
 
+https://github.com/MateusPitura/cli-c-miscellaneous/assets/119008106/d5df1660-04fd-4967-807d-9421a0aa02cd
+
 ## Como executar 
 
 1. `gcc .\main.c -pthread -o main`  
