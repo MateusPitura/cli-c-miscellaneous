@@ -3,7 +3,7 @@
 </h1> 
 
 Este jogo da cobrinha criado em C, implementa diversas funcionalidades extras, como diminuição do mapa e aumento de velocidade. A interface
-gráfica foi criada manualmente e também foi utilizado `pthread`, para executar garanta que ela esteja instalada
+gráfica foi criada manualmente e também foi utilizado `pthread`, para executar garanta que está biblioteca esteja instalada esteja instalada
 
 ## Funcionalidades 
 
