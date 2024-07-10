@@ -292,7 +292,11 @@ int situacao(void){ //Comuta a situacao do funcionario. Retorna -1 em caso de CP
         return -1;
     }
     else{
-        cadFun.sit=='0'?cadFun.sit='1':cadFun.sit='0'; //operador ternario: condicao?verdadeiro:falso
+        if(cadFun.sit == '0'){
+            cadFun.sit='1';
+        } else {
+            cadFun.sit = '0';
+        }
         fseek(fp, curPos, SEEK_SET);
         fwrite(&cadFun, sizeof(cad), 1, fp);
         gotoxy(50,3);

@@ -14,6 +14,7 @@ int i=0;
 
 int main(void){
     int pecas;
+    printf("Digite a quantidade de peças: ");
     scanf("%d", &pecas);
     iniciarTorre(pecas);
     exibirTorre();

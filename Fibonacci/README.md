@@ -1,0 +1,1 @@
+Compile com gcc main.c -o main

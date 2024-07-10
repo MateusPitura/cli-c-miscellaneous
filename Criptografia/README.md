@@ -1,0 +1,1 @@
+./main "C:\Users\mateu\OneDrive\Desktop\photo.crip" "C:\Users\mateu\OneDrive\Desktop\photo.png"

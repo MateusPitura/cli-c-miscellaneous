@@ -1,0 +1,1 @@
+gcc .\040-TentativaPacman.c -pthread -o main
