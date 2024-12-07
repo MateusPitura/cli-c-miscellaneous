@@ -3,7 +3,7 @@
 </h1> 
 
 Este programa foi criado para simular uma parte do jogo do Pacman em C. A interface
-gráfica foi criada manualmente e também foi utilizado `pthread`, para executar garanta que está biblioteca esteja instalada esteja instalada
+gráfica foi criada manualmente e também foi utilizado `pthread`, para executar garanta que está biblioteca esteja instalada
 
 ## Funcionalidades 
 
